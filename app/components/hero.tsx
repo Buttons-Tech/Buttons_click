@@ -15,7 +15,7 @@ const Hero = () => {
          
         <div>
             <h1 className='md:text-[52px] text-[42px] font-extrabold font'>TRANSFORMING IDEAS</h1>
-            <h1 className='md:text-[52px] text-[42px] font-extrabold font'> INTO</h1>
+            <h1 className='md:text-[52px] text-center  text-[42px] font-extrabold font'> INTO</h1>
             <h1 className='md:text-[52px] text-[42px] font-extrabold font text-transparent bg-clip-text bg-gradient-to-r from-[#EF8E33] to-[#40240F]'>POWERFUL SOFTWARE</h1>
             
             <span className='md:text-[32px] text-[24px]'>
