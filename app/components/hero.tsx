@@ -29,6 +29,7 @@ const Hero = () => {
             </div>
         </div>
         <div className='pt-4 w-[30rem]'>
+          <div className='w-[4rem] h-[4rem] rounded-full bg-red-950 '></div>
           <Image
             src= "/img/code.png"
             alt="Hero Image"

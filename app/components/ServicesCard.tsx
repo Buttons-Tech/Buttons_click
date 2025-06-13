@@ -20,7 +20,7 @@ const ServiceCard = ({ title, description, image,  }: Props) => {
   return (
    <>
     <div className='sm:mt-8 bg-[#F3D5BA] w-[317px] h-[339px] rounded-[40px] border-[0.99px] border-[#979696]'>
-                <Image src={image} width={300} height={150} alt="" className='m-auto w-[290px] h-[150px] mt-1 '/>
+                <Image src={image} width={265} height={150} alt="" className='m-auto w-[265px] h-[150px] mt-2 '/>
                 <h1 className='text-center font-semibold text-[16.75px] pt-4'>{title}</h1>
                 <div className=' m-auto w-[290px] flex gap-9 pt-2'>
                     <ul className="list-disc px-4">
