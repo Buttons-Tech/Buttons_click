@@ -7,7 +7,7 @@ import test from '../../public/img/test.png'
 const HowItWorks = () => {
   return (
     <>
-    <div className='w-screen h-[910px] px-10'>
+    <div className='w-screen h-[910px] px-10 '>
         <h1 className='text-[#543A2F] font-extrabold text-[60px] font text-center pt-8 '>How It Works</h1>
         <div className='pt-8'>
         <div  className='flex '>

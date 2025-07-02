@@ -1,10 +1,21 @@
+
 import Image from 'next/image'
-import React from 'react'
 import button from '../../public/img/button.png'
 
-const Whychoosebutton = () => {
-  return (
-<>
+
+type Props = {
+    // Define any props if needed
+    
+    title: string;
+    description: string;
+    image: string;
+  
+    
+}
+
+const WhyChooseBtCard = ({ title, description, image }: Props) => {
+    return (
+ <>
     <div className='max-w-screen min-w-screen h-[816px] px-10 '>
         <h1 className='font text-[#5C4034] text-[55px] font-extrabold text-center pt-12'>Why Choose Buttons?</h1>
         <div>
@@ -15,8 +26,8 @@ const Whychoosebutton = () => {
             </div>
         </div>
     </div>
-</> 
- )
+ </>
+    )
 }
 
-export default Whychoosebutton
+export default WhyChooseBtCard

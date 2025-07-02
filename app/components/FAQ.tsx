@@ -6,7 +6,7 @@ import faq from '../../public/img/faq.png'
 const FAQ = () => {
   return (
     <>
-    <div className='w-screen h-[714px] flex justify-between mt-5'>
+    <div className='w-screen h-[714px] flex justify-between mt-5 '>
         <div>
             <h1 className='font font-bold text-[30px] text-[#5C4034] pb-6 '>FAQs</h1>
             <h2 className='font font-bold text-[44px] text-[#333333] pb-6'>Frequently Asked Questions</h2>
