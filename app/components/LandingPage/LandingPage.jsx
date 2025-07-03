@@ -52,11 +52,11 @@ const App = () => {
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
       {/* Hero Section */}
-      <section id="home" className="relative h-screen flex items-center justify-center text-center overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('https://placehold.co/1920x1080/6366F1/FFFFFF?text=Nigerian+Innovation+Landscape')" }}>
+      <section id="home" className="relative h-screen flex items-center justify-center text-center overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('https://img.freepik.com/premium-photo/africa-concept_627494-1785.jpg?w=360')" }}>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 opacity-80"></div>
         <div className="relative z-10 p-8 max-w-4xl mx-auto text-white">
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-down">
-            <span className="block text-yellow-300">Buttons:</span> Powering Nigeria's Future, One Click at a Time.
+            <span className="block text-yellow-300">Buttons:</span> Powering Africa's Future, One Click at a Time.
           </h1>
           <p className="text-xl md:text-2xl mb-10 animate-fade-in-up delay-200">
             Transforming challenges into opportunities with sustainable software solutions for local businesses, government, and the military.
