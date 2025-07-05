@@ -52,11 +52,11 @@ const App = () => {
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
       {/* Hero Section */}
-      <section id="home" className="relative h-screen flex items-center justify-center text-center overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('https://img.freepik.com/premium-photo/africa-concept_627494-1785.jpg?w=360')" }}>
+      <section id="home" className="relative h-screen flex items-center justify-center text-center overflow-hidden bg-cover bg-center bg-black" style={{ backgroundImage: "url('https://img.freepik.com/premium-photo/africa-concept_627494-1785.jpg?w=360')" }}>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 opacity-80"></div>
         <div className="relative z-10 p-8 max-w-4xl mx-auto text-white">
-          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-down">
-            <span className="block text-yellow-300">Buttons:</span> Powering Africa's Future, One Click at a Time.
+          <h1 className="text-5xl  md:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-down font">
+            <span className="block text-yellow-300 font">Buttons:</span> Powering Africa's Future, One Click at a Time.
           </h1>
           <p className="text-xl md:text-2xl mb-10 animate-fade-in-up delay-200">
             Transforming challenges into opportunities with sustainable software solutions for local businesses, government, and the military.
@@ -73,7 +73,7 @@ const App = () => {
       {/* About Section */}
       <section id="about" className="py-20 px-8 bg-white animate-on-scroll">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6 text-indigo-800">Our Journey: From Vision to Impact</h2>
+          <h2 className="text-4xl font-bold mb-6 text-indigo-800 font">Our Journey: From Vision to Impact</h2>
           <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
             Since 2015, we've been at the forefront of software innovation, evolving from foundational platforms to cutting-edge JavaScript/TypeScript solutions. At Buttons, we believe in the power of technology to simplify the complex and empower communities.
           </p>
@@ -106,7 +106,7 @@ const App = () => {
       {/* Our Products Section */}
       <section id="products" className="py-20 px-8 bg-gradient-to-r from-blue-50 to-purple-50 animate-on-scroll">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6 text-indigo-800">Our Innovations in Action</h2>
+          <h2 className="text-4xl font-bold mb-6 text-indigo-800 font">Our Innovations in Action</h2>
           <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
             We are proud to present our suite of products, each designed to address specific needs and drive efficiency across various sectors.
           </p>
@@ -158,7 +158,7 @@ const App = () => {
       {/* Vision Section */}
       <section id="vision" className="py-20 px-8 bg-white animate-on-scroll">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6 text-indigo-800">Our Grand Vision: The Future of Software</h2>
+          <h2 className="text-4xl font-bold mb-6 text-indigo-800 font">Our Grand Vision: The Future of Software</h2>
           <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
             Our ambition is to build the best software in the world – solutions that millions of people will come to depend on for the easy functioning of the most critical aspects of their lives. We're not just building apps; we're building the future.
           </p>
@@ -194,7 +194,7 @@ const App = () => {
       {/* Call to Action / Partnership Section */}
       <section id="partnership" className="py-20 px-8 bg-gradient-to-br from-indigo-800 to-blue-900 text-white animate-on-scroll">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Build the Future Together?</h2>
+          <h2 className="text-4xl font-bold mb-6 font">Ready to Build the Future Together?</h2>
           <p className="text-xl mb-10 opacity-90">
             We are actively seeking visionary entrepreneurs and forward-thinking politicians to partner with us. Let's create impactful, sustainable software that transforms Nigeria.
           </p>
@@ -210,7 +210,7 @@ const App = () => {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-8 bg-white animate-on-scroll">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6 text-indigo-800">Get in Touch</h2>
+          <h2 className="text-4xl font-bold mb-6 text-indigo-800 font">Get in Touch</h2>
           <p className="text-lg text-gray-700 mb-12">
             Have a project in mind, or want to explore partnership opportunities? We'd love to hear from you.
           </p>
@@ -218,17 +218,17 @@ const App = () => {
             <div className="flex flex-col items-center p-6 rounded-lg shadow-md bg-blue-50">
               <Phone className="text-indigo-600 mb-3" size={32} />
               <p className="text-lg font-semibold text-gray-700">Phone</p>
-              <a href="tel:+2348012345678" className="text-blue-600 hover:underline">+234 801 234 5678</a> {/* Placeholder number */}
+              <a href="tel:+2349066596603" className="text-blue-600 hover:underline">+234 906 659 6603</a> {/* Placeholder number */}
             </div>
             <div className="flex flex-col items-center p-6 rounded-lg shadow-md bg-blue-50">
               <Mail className="text-indigo-600 mb-3" size={32} />
               <p className="text-lg font-semibold text-gray-700">Email</p>
-              <a href="mailto:info@buttons.com.ng" className="text-blue-600 hover:underline">info@buttons.com.ng</a> {/* Placeholder email */}
+              <a href="mailto:info@buttons.com.ng" className="text-blue-600 hover:underline">info@buttons.click</a> {/* Placeholder email */}
             </div>
             <div className="flex flex-col items-center p-6 rounded-lg shadow-md bg-blue-50">
               <MapPin className="text-indigo-600 mb-3" size={32} />
               <p className="text-lg font-semibold text-gray-700">Location</p>
-              <p className="text-gray-600">Abuja, Nigeria</p> {/* Placeholder location */}
+              <p className="text-gray-600">Lagos, Nigeria</p> {/* Placeholder location */}
             </div>
           </div>
           {/* Simple Contact Form (Optional, can be expanded) */}
