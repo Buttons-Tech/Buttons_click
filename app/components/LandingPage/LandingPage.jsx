@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import image from '../../../public/img/buttns_bground.png'
 import { ChevronRight, Lightbulb, Handshake, Shield, Rocket, Briefcase, Users, Building2, Military, Phone, Mail, MapPin } from 'lucide-react'; // Changed Government to Building2
 
 // Main App Component
@@ -52,8 +53,10 @@ const App = () => {
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
       {/* Hero Section */}
-      <section id="home" className="relative h-screen flex items-center justify-center text-center overflow-hidden bg-cover bg-center bg-black" style={{ backgroundImage: "url('https://img.freepik.com/premium-photo/africa-concept_627494-1785.jpg?w=360')" }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 opacity-80"></div>
+      <section id="home" className="relative h-screen flex items-center justify-center text-center overflow-hidden bg-cover bg-center bg-black bg-[url('/img/buttns_bground.png')] "
+      //  style={{ backgroundImage: "url('https://img.freepik.com/premium-photo/africa-concept_627494-1785.jpg?w=360')" }}
+       >
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black to-black opacity-80"></div>
         <div className="relative z-10 p-8 max-w-4xl mx-auto text-white">
           <h1 className="text-5xl  md:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-down font">
             <span className="block text-yellow-300 font">Buttons:</span> Powering Africa's Future, One Click at a Time.
