@@ -1,24 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
- import { Inter, Orbitron } from 'next/font/google';
+ import { Montserrat } from 'next/font/google';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
-const inter = Inter({
-      subsets: ['latin'], // or your language-specific subset
-    });
-    const orbitron = Orbitron({
-      weight: '400', // or your desired weight
+    const montserrat = Montserrat({
+      weight: ['400', '700', '900'], // or your desired weight
       subsets: ['latin'],
+      variable: '--font-montserrat',
+      display: 'swap'
     });
 
 export const metadata: Metadata = {
@@ -32,9 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={orbitron.className}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+    <html lang="en" className={montserrat.className}>
+      <body      
       >
         {children}
       </body>

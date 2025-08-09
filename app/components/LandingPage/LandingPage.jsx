@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import image from '../../../public/img/buttns_bground.png'
-import { ChevronRight, Lightbulb, Handshake, Shield, Rocket, Briefcase, Users, Building2, Military, Phone, Mail, MapPin } from 'lucide-react'; // Changed Government to Building2
+import About from '../About'
+import { ChevronRight, Shield, Rocket, Briefcase, Users, Building2, Military, Phone, Mail, MapPin } from 'lucide-react'; // Changed Government to Building2
+import Products from '../Products';
+import Vision from '../Vision';
 
 // Main App Component
 const App = () => {
@@ -58,8 +62,14 @@ const App = () => {
        >
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black to-black opacity-80"></div>
         <div className="relative z-10 p-8 max-w-4xl mx-auto text-white">
+          <div className=' bg-white h-10 w-39 md:h-[90px] md:w-79 m-auto flex'>
+            <div cl>
+            <Image src= "/img/buttons_logo.webp" width={280} height={150}  alt="" className='m-auto py-1 pl-2'  />
+             <span className="block text-black font text-5xl  md:text-7xl"><span className='bg-yellow-500 p-1 shadow '>.click</span></span>
+            </div>
+          </div>
           <h1 className="text-5xl  md:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-down font">
-            <span className="block text-yellow-300 font">Buttons:</span> Powering Africa's Future, One Click at a Time.
+          Powering Africa's Future, One Click at a Time.
           </h1>
           <p className="text-xl md:text-2xl mb-10 animate-fade-in-up delay-200">
             Transforming challenges into opportunities with sustainable software solutions for local businesses, government, and the military.
@@ -75,123 +85,19 @@ const App = () => {
 
       {/* About Section */}
       <section id="about" className="py-20 px-8 bg-white animate-on-scroll">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6 text-indigo-800 font">Our Journey: From Vision to Impact</h2>
-          <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
-            Since 2015, we've been at the forefront of software innovation, evolving from foundational platforms to cutting-edge JavaScript/TypeScript solutions. At Buttons, we believe in the power of technology to simplify the complex and empower communities.
-          </p>
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="p-6 rounded-lg shadow-xl bg-blue-50 transform hover:scale-105 transition duration-300 ease-in-out">
-              <Lightbulb className="text-indigo-600 mb-4 mx-auto" size={48} />
-              <h3 className="text-2xl font-semibold mb-3 text-indigo-700">Innovative Solutions</h3>
-              <p className="text-gray-600">
-                We research, design, and code web and mobile applications that are not just functional, but truly transformative.
-              </p>
-            </div>
-            <div className="p-6 rounded-lg shadow-xl bg-blue-50 transform hover:scale-105 transition duration-300 ease-in-out">
-              <Handshake className="text-indigo-600 mb-4 mx-auto" size={48} />
-              <h3 className="text-2xl font-semibold mb-3 text-indigo-700">Local Empowerment</h3>
-              <p className="text-gray-600">
-                Our focus is on building sustainable software tailored for Nigerian local businesses, government, and military needs.
-              </p>
-            </div>
-            <div className="p-6 rounded-lg shadow-xl bg-blue-50 transform hover:scale-105 transition duration-300 ease-in-out">
-              <Shield className="text-indigo-600 mb-4 mx-auto" size={48} />
-              <h3 className="text-2xl font-semibold mb-3 text-indigo-700">Reliability & Trust</h3>
-              <p className="text-gray-600">
-                We aim to create software that millions will depend on for the critical aspects of their lives.
-              </p>
-            </div>
-          </div>
-        </div>
+
+        <About/>
+
       </section>
 
       {/* Our Products Section */}
       <section id="products" className="py-20 px-8 bg-gradient-to-r from-blue-50 to-purple-50 animate-on-scroll">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6 text-indigo-800 font">Our Innovations in Action</h2>
-          <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
-            We are proud to present our suite of products, each designed to address specific needs and drive efficiency across various sectors.
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {/* Existing Product 1 */}
-            <div className="bg-white p-8 rounded-lg shadow-xl border-t-4 border-indigo-500 transform hover:scale-105 transition duration-300 ease-in-out">
-              <Briefcase className="text-indigo-600 mb-4 mx-auto" size={48} />
-              <h3 className="text-2xl font-semibold mb-3 text-indigo-700">Business Efficiency Suite</h3>
-              <p className="text-gray-600">
-                Streamlining operations for local businesses, from inventory management to customer relations.
-              </p>
-            </div>
-            {/* Existing Product 2 */}
-            <div className="bg-white p-8 rounded-lg shadow-xl border-t-4 border-green-500 transform hover:scale-105 transition duration-300 ease-in-out">
-              <Users className="text-green-600 mb-4 mx-auto" size={48} />
-              <h3 className="text-2xl font-semibold mb-3 text-indigo-700">Community Engagement Platform</h3>
-              <p className="text-gray-600">
-                Connecting communities and facilitating seamless communication for local initiatives.
-              </p>
-            </div>
-            {/* Existing Product 3 */}
-            <div className="bg-white p-8 rounded-lg shadow-xl border-t-4 border-yellow-500 transform hover:scale-105 transition duration-300 ease-in-out">
-              <Building2 className="text-yellow-600 mb-4 mx-auto" size={48} /> {/* Changed Government to Building2 */}
-              <h3 className="text-2xl font-semibold mb-3 text-indigo-700">Public Service Automation</h3>
-              <p className="text-gray-600">
-                Automating key government services to enhance citizen access and administrative efficiency.
-              </p>
-            </div>
-            {/* Existing Product 4 */}
-            <div className="bg-white p-8 rounded-lg shadow-xl border-t-4 border-red-500 transform hover:scale-105 transition duration-300 ease-in-out">
-              <Shield className="text-red-600 mb-4 mx-auto" size={48} />
-              <h3 className="text-2xl font-semibold mb-3 text-indigo-700">Secure Data Management</h3>
-              <p className="text-gray-600">
-                Robust solutions ensuring data integrity and security for sensitive operations.
-              </p>
-            </div>
-            {/* New Product in Development */}
-            <div className="bg-white p-8 rounded-lg shadow-xl border-t-4 border-purple-500 transform hover:scale-105 transition duration-300 ease-in-out md:col-span-2 lg:col-span-1 lg:col-start-2">
-              <Rocket className="text-purple-600 mb-4 mx-auto" size={48} />
-              <h3 className="text-2xl font-semibold mb-3 text-indigo-700">Niger State Ride-Sharing App</h3>
-              <p className="text-gray-600">
-                Currently in development, this app will revolutionize transportation for the Niger State government and its citizens.
-              </p>
-            </div>
-          </div>
-        </div>
+       <Products/>
       </section>
 
       {/* Vision Section */}
       <section id="vision" className="py-20 px-8 bg-white animate-on-scroll">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6 text-indigo-800 font">Our Grand Vision: The Future of Software</h2>
-          <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
-            Our ambition is to build the best software in the world – solutions that millions of people will come to depend on for the easy functioning of the most critical aspects of their lives. We're not just building apps; we're building the future.
-          </p>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-            <div className="w-full md:w-1/2 p-6 bg-blue-50 rounded-lg shadow-xl">
-              <img
-                src="https://placehold.co/600x400/A78BFA/FFFFFF?text=Global+Impact"
-                alt="Global Impact"
-                className="rounded-lg mb-6 w-full h-auto object-cover"
-                onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/A78BFA/FFFFFF?text=Image+Unavailable'; }}
-              />
-              <h3 className="text-2xl font-semibold mb-3 text-indigo-700">Software for Billions</h3>
-              <p className="text-gray-600">
-                Crafting intuitive and robust software that integrates seamlessly into daily life, making complex tasks simple.
-              </p>
-            </div>
-            <div className="w-full md:w-1/2 p-6 bg-blue-50 rounded-lg shadow-xl">
-              <img
-                src="https://placehold.co/600x400/6366F1/FFFFFF?text=Sustainable+Growth"
-                alt="Sustainable Growth"
-                className="rounded-lg mb-6 w-full h-auto object-cover"
-                onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/6366F1/FFFFFF?text=Image+Unavailable'; }}
-              />
-              <h3 className="text-2xl font-semibold mb-3 text-indigo-700">Sustainable Innovation</h3>
-              <p className="text-gray-600">
-                Committed to long-term solutions that are environmentally conscious and socially responsible.
-              </p>
-            </div>
-          </div>
-        </div>
+        <Vision/>
       </section>
 
       {/* Call to Action / Partnership Section */}
