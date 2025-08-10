@@ -7,7 +7,7 @@ const Hero = () => {
   
 
   return (
-    <div className='bg-white w-[357px] flex justify-center m-auto rounded-[8px] h-100 relative -top-4 '>
+    <div className='bg-white w-[357px] flex justify-center  rounded-[8px] relative -top-4 '>
       <Image alt='boy' src={Boy} width={200} height={400}  className='w-[167px] h-[252px] absolute -top-1 z-10' />
       <div className='flex relative items-center justify-center w-[296px] h-[251px] overflow-clip mt-[27px]'>
 

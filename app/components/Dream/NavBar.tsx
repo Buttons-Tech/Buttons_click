@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <>
         
-            <div className='bg-white w-[357px] m-auto rounded-[8px] '>
+            <div className='bg-white w-[357px]  rounded-[8px] '>
                 <div className='flex gap-4 items-center p-5 justify-between '>
                     <div>
 

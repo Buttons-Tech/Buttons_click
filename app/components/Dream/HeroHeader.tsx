@@ -3,7 +3,7 @@ import React from 'react'
 const HeroHeader = () => {
   return (
     <>
-        <div className='text-[10px] flex flex-col leading-[19px] p-[29px]'>
+        <div className='text-[10px] flex flex-col leading-[19px] -mt-5 p-[29px] bg-white w-[357px]'>
             <span className='text-[32px] font-black text-[#7769B6] '>EARLY YEARS</span><br />
             <span className='text-[32px] font-bold'>Investing Early in </span> <br />
             <span className='text-[32px] font-bold text-[#FFBE15]'>Their Future </span><br />
