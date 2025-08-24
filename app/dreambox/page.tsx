@@ -7,7 +7,7 @@ import Partners from '../components/Dream/Partners'
 const page = () => {
   return (
     <>
-    <div className='bg-white w-screen p-12'>
+    <div className='bg-white w-screen p-1'>
 
       <NavBar/>
       <Hero/>
