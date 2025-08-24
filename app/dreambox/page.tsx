@@ -10,8 +10,8 @@ const page = () => {
     <div className='bg-white w-screen p-12'>
 
       <NavBar/>
-      {/* <Hero/> */}
-      {/* <HeroHeader/> */}
+      <Hero/>
+      <HeroHeader/>
       <Partners />
 
     </div>

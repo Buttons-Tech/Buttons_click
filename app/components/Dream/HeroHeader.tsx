@@ -3,11 +3,17 @@ import React from 'react'
 const HeroHeader = () => {
   return (
     <>
-        <div className='text-[10px] flex flex-col leading-[19px] -mt-5 p-[29px] bg-white w-[357px]'>
-            <span className='text-[32px] font-black text-[#7769B6] '>EARLY YEARS</span><br />
-            <span className='text-[32px] font-bold'>Investing Early in </span> <br />
-            <span className='text-[32px] font-bold text-[#FFBE15]'>Their Future </span><br />
-            <span className=''>Our e-learning programs have been developed to be a vehicle of delivering creative learning solutions for your toddlers </span>
+        <div className='text-[10px] flex flex-col leading-[19px] -mt-5 p-[29px] bg-white w-[487px]'>
+          <div className='gap-2 flex'>
+            <span className='text-[32px] font-black text-[#000000] '>EMPOWERING</span> <span className='text-[32px] text-[#000000] '> YOUR</span>
+          </div> <br />
+            <div className='gap-2 flex'>
+            <span className='text-[32px]'>CHILD’S </span><span className='text-[32px] font-bold'>DIVERSE </span>
+            </div> <br />
+            <span className='text-[32px] font-bold text-[#000000]'>TALENTS</span><br />
+            <span className='text-[32px] font-bold text-[#A40C76]'>IN THE DIGITAL AGE</span><br />
+            <span className='text-[12px]'>AT DreamBox we discover their unique</span>
+            <span className='text-[12px]'>potentials and help them shine</span>
         </div>
     </>
   )
