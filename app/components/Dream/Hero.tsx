@@ -8,9 +8,11 @@ const Hero = () => {
   
 
   return (
-    <div className='bg-white w-[357px] flex justify-center m-auto  rounded-[8px] relative -top-4 '>
-      <Image alt='boy' src={Boy} width={200} height={400}  className='w-[267px] h-[352px] absolute -top-1 z-10 left-0' />
-      <Image alt='girl' src={Girl} width={200} height={400}  className='w-[167px] h-[252px] absolute z-10 right-0 bottom-0' />
+    <>
+    
+      <Image alt='boy' src={Boy} width={300} height={400}  className=' h-[352px] absolute top-10 left-10 z-10' />
+    <div className='bg-white mx-[2rem] flex justify-center m-auto border rounded-[8px] relative -top-4 '>
+      <Image alt='girl' src={Girl} width={220} height={400}  className=' h-[252px] absolute z-10 right-0 bottom-0' />
       <div className='flex relative items-center justify-center w-[343px] h-[251px] overflow-clip mt-[27px]'>
 
         <div className='w-[343px] bg-[#FFF3FB] h-[343px] rounded-[100%] flex items-center justify-center absolute '>
@@ -27,6 +29,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

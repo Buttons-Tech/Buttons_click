@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import RegisterForm from '../components/ui/RegisterForm'
 
-const RegisterForm = () => {
+const page = () => {
 
     
 
@@ -14,4 +14,4 @@ const RegisterForm = () => {
   )
 }
 
-export default RegisterForm
+export default page
