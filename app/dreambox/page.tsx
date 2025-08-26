@@ -10,11 +10,11 @@ const page = () => {
     <>
     <div className='bg-white w-screen p-1'>
 
-      {/* <NavBar/> */}
-      {/* <Hero/> */}
-      {/* <HeroHeader/> */}
-      {/* <Partners /> */}
-      <RegisterForm />
+      <NavBar/>
+      <Hero/>
+      <HeroHeader/>
+      <Partners />
+      {/* <RegisterForm /> */}
 
     </div>
     </>
