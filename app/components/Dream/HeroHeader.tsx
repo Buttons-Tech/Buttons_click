@@ -12,7 +12,7 @@ const HeroHeader = () => {
             </div> <br />
             <span className='text-[24px] font-bold text-[#000000]'>TALENTS</span><br />
             <span className='text-[24px] font-bold text-[#A40C76]'>IN THE DIGITAL AGE</span><br />
-            <span className='text-[16px]'>AT DreamBox we discover their unique</span>
+            <span className='text-[16px] text-black'>AT DreamBox we discover their unique</span>
             <span className='text-[16px]'>potentials and help them shine</span>
         </div>
     </>

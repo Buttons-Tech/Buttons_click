@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link';
 import React, { useState } from 'react'
 
 const RegisterForm = () => {
@@ -60,6 +61,8 @@ const RegisterForm = () => {
                         Not registered? <a href="#" className="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
                     </div>
                 </form>
+                
+                <Link href={'/dreambox'} className='bg-amber-300 p-2'>Go to DreamBox</Link>
 
    </>
   )

@@ -1,8 +1,10 @@
+import Link from 'next/link'
 import React from 'react'
 
 const BigButton = () => {
   return (
     <>
+    <Link href='/register'>
     <div className=' text-white w-[271px] m-auto rounded-[38px] p-3 flex  h-[74px] from-[#A40C76] to-[#E93EB5] bg-gradient-to-b items-center justify-center shadow-lg'>
         <div className='flex items-center justify-center gap-4 px-4 '>
 
@@ -16,6 +18,7 @@ const BigButton = () => {
 
     <span className='text-[#A40C76] '>Register as a <span className='font-bold'>TUTOR</span> </span>
     </div>
+    </Link>
     </>
   )
 }

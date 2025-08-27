@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './Button'
+import Link from 'next/link'
 
 const NavBar = () => {
   return (
@@ -17,8 +18,9 @@ const NavBar = () => {
                         </div>
                     </div>
                     <div className='flex gap-3 items-center'>
-
+                      <Link href={'/register'}>
                     <Button/>
+                      </Link>
                     <img className='w-[17px] ' src="/dream-img/dashboard.png" alt="" />
                     </div>
                 </div>
