@@ -14,7 +14,7 @@ const Partners = () => {
 
 
   return (
-    <div className='flex  flex-col text-center '>
+    <div className='flex  flex-col text-center mt-5 '>
       <span className='text-[#696EB9] text-[2rem] font-bold'>Our Partners</span>
       <span className='text-[1.3rem]'>We work with the best schools</span>
       <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 px-4'>
