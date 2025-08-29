@@ -3,6 +3,7 @@ import NavBar from '../components/Dream/NavBar'
 import Hero from '../components/Dream/Hero'
 import HeroHeader from '../components/Dream/HeroHeader'
 import Partners from '../components/Dream/Partners'
+import Categories from '../components/Dream/Categories'
 import Counter from '../components/Dream/Counter'
 import BigButton from '../components/Dream/BigButton'
 import RegisterForm from '../components/ui/RegisterForm'
@@ -17,6 +18,7 @@ const page = () => {
       <HeroHeader/>
       <BigButton />
       <Counter />
+      <Categories />
       <Partners />
       {/* <RegisterForm /> */}
 
