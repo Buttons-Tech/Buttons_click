@@ -1,6 +1,37 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 
 const page = () => {
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState('')
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setLoading(true)
+    setError('')
+    setSuccess(false)
+    try {
+      const res = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (!res.ok) throw new Error('Failed to send message')
+      setSuccess(true)
+      setForm({ name: '', email: '', message: '' })
+    } catch (err) {
+      setError('Something went wrong. Please try again.')
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
     <>
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-gray-900 text-white relative px-4">
@@ -13,30 +44,46 @@ const page = () => {
           Got a question, a bug to squash, or just want to say hi? <br />
           Our team of caffeinated engineers is ready to chat!
         </p>
-        <form className="w-full flex flex-col gap-4">
+        <form className="w-full flex flex-col gap-4" onSubmit={handleSubmit}>
           <input
             type="text"
+            name="name"
             placeholder="Your Name"
+            value={form.name}
+            onChange={handleChange}
             className="rounded-lg px-4 py-2 bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            required
           />
           <input
             type="email"
+            name="email"
             placeholder="Your Email"
+            value={form.email}
+            onChange={handleChange}
             className="rounded-lg px-4 py-2 bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            required
           />
           <textarea
+            name="message"
             placeholder="How can we help you?"
             rows={4}
+            value={form.message}
+            onChange={handleChange}
             className="rounded-lg px-4 py-2 bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
+            required
           />
           <button
             type="submit"
-            className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-colors text-white font-bold py-2 rounded-lg shadow-lg mt-2"
+            disabled={loading}
+            className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-colors text-white font-bold py-2 rounded-lg shadow-lg mt-2 disabled:opacity-60"
           >
-            🚀 Send Message
+            {loading ? 'Sending...' : '🚀 Send Message'}
           </button>
         </form>
+        {success && <div className="mt-4 text-green-400 font-semibold">Message sent successfully!</div>}
+        {error && <div className="mt-4 text-red-400 font-semibold">{error}</div>}
         <div className="flex gap-6 mt-8">
+          {/* ...social links unchanged... */}
           <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
             <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
               <path d="M22.46 5.92c-.8.36-1.67.6-2.58.71a4.48 4.48 0 0 0 1.97-2.48 8.93 8.93 0 0 1-2.83 1.08 4.48 4.48 0 0 0-7.64 4.09A12.73 12.73 0 0 1 3.1 4.9a4.48 4.48 0 0 0 1.39 5.98c-.7-.02-1.36-.21-1.94-.53v.05a4.48 4.48 0 0 0 3.6 4.4c-.33.09-.68.14-1.04.14-.25 0-.5-.02-.74-.07a4.48 4.48 0 0 0 4.18 3.11A9 9 0 0 1 2 19.54a12.73 12.73 0 0 0 6.89 2.02c8.27 0 12.8-6.85 12.8-12.8 0-.2 0-.41-.02-.61a9.18 9.18 0 0 0 2.26-2.34z"/>

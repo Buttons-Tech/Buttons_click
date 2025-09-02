@@ -3,69 +3,123 @@ import Link from 'next/link';
 import React, { useState } from 'react'
 
 const RegisterForm = () => {
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [gradeLevel, setGradeLevel] = useState('');
+    const [loading, setLoading] = useState(false);
 
-    const [name, setName] = useState('Ziorammanna');
-    const [email, setEmail] = useState('z@chi');
-    const [password, setPassword] = useState('1234');
-    const [data, setData] = useState([{userName: name, mail:email, pass: password}]);
-
-    const test = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setName(e.target.value);
-       
-    }   
-    const handleEmailChange = (e) => {
-        setEmail(e.target.value);
-       
-    }
-    const handleNameChange = (e) => {
-        setName(e.target.value);
-       
-    }
-    const handlePasswordChange = (e) => {
-        setPassword(e.target.value);
-       
+        setLoading(true);
+        try {
+            const res = await fetch("http://localhost:5000/api/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    firstName,
+                    lastName,
+                    email,
+                    password,
+                    gradeLevel
+                })
+            });
+            // Optionally handle response here
+            setLoading(false);
+        } catch (error) {
+            setLoading(false);
+            // Optionally handle error here
+        }
     }
 
-  return (
-   <>
-   {name }
-   {data.userName}
-   <h3 className="text-xl font-semibold text-center text-gray-900 dark:text-white">
-                    Sign in to our platform
-                </h3>
-   <form className="space-y-4 w-[20rem] m-auto flex flex-col mt-6" action="#">
-                    <div>
-                        <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your name</label>
-                        <input type="name" onChange={(e)=>handleChange(e)} name="name" id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name" required />
-                    </div>
-                    <div>
-                        <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                        <input type="email" onChange={(e)=>handleEmailChange(e)} name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required />
-                    </div> 
-                    <div>
-                        <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-                        <input type="password" onChange={(e)=>handlePasswordChange(e)} name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
-                    </div>
-                    <div className="flex justify-between">
-                        <div className="flex items-start">
-                            <div className="flex items-center h-5">
-                                <input id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
-                            </div>
-                            <label htmlFor="remember" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-                        </div>
-                        <a href="#" className="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
-                    </div>
-                    <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
-                    <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
-                        Not registered? <a href="#" className="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
-                    </div>
-                </form>
-                
-                <Link href={'/dreambox'} className='bg-amber-300 p-2'>Go to DreamBox</Link>
-
-   </>
-  )
+    return (
+        <>
+            <h3 className="text-xl font-semibold text-center text-gray-900 dark:text-white">
+                Sign up to our platform
+            </h3>
+            <form className="space-y-4 w-[20rem] m-auto flex flex-col mt-6" onSubmit={handleSubmit}>
+                <div>
+                    <label htmlFor="firstName" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
+                    <input
+                        type="text"
+                        name="firstName"
+                        id="firstName"
+                        value={firstName}
+                        onChange={e => setFirstName(e.target.value)}
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                        placeholder="First Name"
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="lastName" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last Name</label>
+                    <input
+                        type="text"
+                        name="lastName"
+                        id="lastName"
+                        value={lastName}
+                        onChange={e => setLastName(e.target.value)}
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                        placeholder="Last Name"
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                        placeholder="name@company.com"
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
+                        placeholder="••••••••"
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="gradeLevel" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Grade Level</label>
+                    <input
+                        type="text"
+                        name="gradeLevel"
+                        id="gradeLevel"
+                        value={gradeLevel}
+                        onChange={e => setGradeLevel(e.target.value)}
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                        placeholder="Grade Level"
+                        required
+                    />
+                </div>
+                <button
+                    type="submit"
+                    className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    disabled={loading}
+                >
+                    {loading ? "Registering..." : "Register"}
+                </button>
+                <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
+                    Already registered? <a href="#" className="text-blue-700 hover:underline dark:text-blue-500">Sign in</a>
+                </div>
+            </form>
+            <Link href={'/dreambox'} className='bg-amber-300 p-2'>Go to DreamBox</Link>
+        </>
+    )
 }
 
 export default RegisterForm

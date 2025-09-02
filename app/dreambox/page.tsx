@@ -7,6 +7,7 @@ import Categories from '../components/Dream/Categories'
 import Counter from '../components/Dream/Counter'
 import BigButton from '../components/Dream/BigButton'
 import RegisterForm from '../components/ui/RegisterForm'
+import Team from '../components/Dream/Teams'
 
 const page = () => {
   return (
@@ -19,6 +20,7 @@ const page = () => {
       <BigButton />
       <Counter />
       <Categories />
+      <Team />
       <Partners />
       {/* <RegisterForm /> */}
 
